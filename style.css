@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+Paleta de Cores - Você pode apagar depois que passar para as variáveis.
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+/*
+Variáveis de Cores
+*/
+
+:root{
+        --cor0:#c5ebd6;
+        --cor1:#83e1ad;
+        --cor2:#3ddc84;
+        --cor3:#2fa866;
+        --cor4:#1a5c37;
+        --cor5:#063d1e;
+
+        --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+        --fonte-destaque: 'Bebas Neue', cursive;
+        --fonte-android: 'MinhaFonte', cursive;
+}
+
+header {
+        background-image: linear-gradient(to top, var(--cor4), var(--cor3));
+        min-height: 150px;
+        }
+        
+header h1{
+        color: #fff;
+        text-align: center;
+        font-family: var(--fonte-destaque);
+        font-size: 3em;
+        margin: 0;
+        padding: 10px 0;
+        text-shadow: 2px 2px 0px #0000008a;
+}
+
+header p {
+        color: #fff;
+        text-align: center;
+        font-family: var(--fonte-padrao);
+        font-size: 1.3em;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px 0;
+        text-shadow: 2px 2px 0px #0000008a;
+}
+
+nav {
+        background-color: var(--cor5);
+        padding: 10px 0;
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.356);
+}
+nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px; /* Adiciona espaçamento dos dois lados de cada link */
+        font-weight: bold;
+        border-radius: 5px;
+        transition-duration: .5s;
+}
+
+nav a:hover {
+        background-color: var(--cor3);
+        color: var(--cor5);
+}
+
+* {
+        margin: 0; /* Remove margens padrão */
+        padding: 0;
+} /* Estilos Globais */
+
+body {
+        background-color: var(--cor0);
+        margin: 0;
+        font-family: var(--fonte-padrao);
+}
+
+main {
+        max-width: 1200px; /* Largura máxima para telas grandes */
+        min-width: 320px; /* Largura mínima para telas pequenas */
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        margin-bottom: 20px; /* Espaço entre main e footer */
+        border-radius: 0 0px 10px 10px; /* Bordas arredondadas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o conteúdo */
+}
+
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android) /* Use o nome definido acima */
+}
+
+main h2 {
+    font-family: var(--fonte-android); /* Use o nome definido acima */
+}
+
+main p {
+    text-align: justify;
+    margin: 15px 0;
+    text-indent: 30px; /* Indenta a primeira linha do parágrafo */
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+main img,
+main picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Garante que não ultrapasse o main */
+    height: auto;    /* Mantém proporção da imagem */
+}
+
+main iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Garante que não ultrapasse o main */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantém proporção de vídeo */
+    padding-bottom: 2%; /* Espaço entre vídeo incorporado e conteúdo seguinte*/
+}
+
+main img.pequena {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+
+.android {
+        font-family: 'MinhaFonte', Arial, Helvetica, sans-serif; /* Use o nome definido acima */
+        color: #1e5c19;
+}
+
+h2.android {
+        font-family: 'MinhaFonte', Arial, Helvetica, sans-serif; /* Use o nome definido acima */
+        color: #1e5c19;
+        background-image: linear-gradient(to right, #bdffb8, transparent);
+        text-indent: 8px;
+}
+
+.link::after {
+    content: "\1F517";
+}
+
+aside {
+        background-color: var(--cor1);
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.356);
+}
+
+.special {
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #2e8d28d3;
+        border-radius: 10px 10px 0px 0px;
+        margin: 0;
+        margin-bottom: 0px;
+        padding: 10px;
+}
+
+aside ul {
+        list-style-type: "\2714\00A0\00A0"; /* Símbolo de check com espaço (não é compatível com todos os navegadores)*/
+        list-style-position: inside; /* Coloca o símbolo dentro do bloco (A posição padrão é outside)*/
+        columns: 2; /* Divide a lista em duas colunas */
+}
+
+footer {
+        background-color: var(--cor5);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.7em;
+        margin: 0;
+}
+
+footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bolder;
+}
+
+footer a:hover {
+        color: var(--cor1);
+        text-decoration: underline;
+}
